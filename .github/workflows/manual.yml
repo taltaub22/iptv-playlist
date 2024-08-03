@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: get playright ready
-        run: npm playwright install
+        run: npx playwright install
       
       - name: Run Node.js script
         run: node index.js
