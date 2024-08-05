@@ -39,6 +39,9 @@ jobs:
       - name: Run Node.js script
         run: node index.js
 
+      - name: Disconnect VPN
+        run: sudo openvpn --quit
+
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
