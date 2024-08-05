@@ -37,8 +37,10 @@ jobs:
       - name: Run Node.js script
         run: node index.js
 
-      - name: Commit and push changes
+      - name: Use git
         uses: actions/checkout@v4
+        
+      - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
