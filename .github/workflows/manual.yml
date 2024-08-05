@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-and-push:
+  generate:
     runs-on: macos-latest
 
     steps:
@@ -36,7 +36,14 @@ jobs:
 
       - name: Run Node.js script
         run: node index.js
-        
+
+  push:
+    runs-on: macos-latest
+    needs: generate
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
