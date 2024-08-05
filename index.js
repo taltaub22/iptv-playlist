@@ -9,7 +9,7 @@ async function getKesetURL() {
     const NEW_STRING = 'b-in-range=0-5000'
     
     const browser = await playwright.webkit.launch({
-        headless: true // setting this to true will not run the UI
+        headless: false // setting this to true will not run the UI
     });
 
     const page = await browser.newPage();
@@ -30,7 +30,9 @@ async function buildPlaylist() {
     const m3uRaw = fs.readFileSync(PLAYLIST_FILE, 'utf-8')
     const m3u = parseM3U(m3uRaw)
     
-    m3u.channels.find(x => x.name == 'Keshet 12').url = await getKesetURL()
+    const keshetURL = await getKesetURL()
+
+    m3u.channels.find(x => x.name == 'Keshet 12').url = decodeURIComponent(keshetURL)
     
     const newm3u = writeM3U(m3u)
     fs.writeFileSync(PLAYLIST_FILE, newm3u)
