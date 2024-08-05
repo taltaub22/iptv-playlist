@@ -24,8 +24,8 @@ jobs:
       
       - name: Install OpenVPN
         run: |
-          sudo apt update
-          sudo apt install -y openvpn openvpn-systemd-resolved
+          brew update
+          brew install openvpn
 
       - name: Connect to VPN
         uses: "kota65535/github-openvpn-connect-action@v2"
