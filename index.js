@@ -40,7 +40,7 @@ async function buildPlaylist() {
     
     console.log("Writing playlist file")
     const newm3u = writeM3U(m3u)
-    fs.writeFileSync(PLAYLIST_FILE, newm3u)
+    fs.writeFileSync(`./playlist-${new Date().toISOString()}.m3u`, newm3u)
     
 }
 

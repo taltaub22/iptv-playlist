@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate:
+  generate-and-push:
     runs-on: macos-latest
 
     steps:
@@ -37,17 +37,10 @@ jobs:
       - name: Run Node.js script
         run: node index.js
 
-  push:
-    runs-on: macos-latest
-    needs: generate
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add playlist.m3u
+          git add .
           git commit -m 'playlist update'
           git push
