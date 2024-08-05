@@ -36,7 +36,7 @@ async function buildPlaylist() {
     
     const keshetURL = await getKesetURL()
 
-    m3u.channels.find(x => x.name == 'Keshet 12').url = decodeURIComponent(keshetURL)
+    m3u.channels.find(x => x.name == 'Keshet 12').url = (keshetURL)
     
     console.log("Writing playlist file")
     const newm3u = writeM3U(m3u)
