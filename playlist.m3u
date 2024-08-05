@@ -5,5 +5,5 @@ https://kan11w.media.kan.org.il/hls/live/2105694/2105694/master.m3u8
 https://mako-streaming.akamaized.net/stream/hls/live/2033791/k12dvr/index.m3u8?b-in-range=0-5000&_uid=fb2f499a-78bb-4c56-830b-c9369168be3e&dxu=5409ead4-cae1-4218-a16a-d410e308fb0f&hdnea=st=1722875596~exp=1722876496~acl=/*~hmac=7cb0f8be3cfd273ac9dcec33e3cac345cb1038e24d579060d4860adaa681736a
 #EXTINF:-1 type="stream" channelId="13" group="All" aspect-ratio="16:9" tvg-country="il",Reshet 13
 https://d18b0e6mopany4.cloudfront.net/out/v1/08bc71cf0a0f4712b6b03c732b0e6d25/index.m3u8
-#EXTINF:-1 type="stream" channelId="24" group="All",I24 News English
+#EXTINF:-1 type="stream" channelId="24" group="All",I24 News Hebrew
 https://bcovlive-a.akamaihd.net/6e3dd61ac4c34d6f8fb9698b565b9f50/eu-central-1/5377161796001/playlist-all_dvr.m3u8
