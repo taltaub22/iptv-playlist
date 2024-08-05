@@ -9,7 +9,7 @@ async function getKesetURL() {
     const NEW_STRING = 'b-in-range=0-5000'
     
     const browser = await playwright.webkit.launch({
-        headless: false // setting this to true will not run the UI
+        headless: true // setting this to true will not run the UI
     });
 
     console.log("Browser opened")
@@ -40,7 +40,7 @@ async function buildPlaylist() {
     
     console.log("Writing playlist file")
     const newm3u = writeM3U(m3u)
-    fs.writeFileSync(`./playlist-${new Date().toISOString()}.m3u`, newm3u)
+    fs.writeFileSync(`./playlist.m3u`, newm3u)
     
 }
 
