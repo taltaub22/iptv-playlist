@@ -37,15 +37,11 @@ jobs:
       - name: Run Node.js script
         run: node index.js
 
-      - name: Configure git
+      - name: Commit and push changes
+        uses: actions/checkout@v4
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Commit and push changes
-        run: |
           git add playlist.m3u
           git commit -m 'playlist update'
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

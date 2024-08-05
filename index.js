@@ -12,12 +12,16 @@ async function getKesetURL() {
         headless: false // setting this to true will not run the UI
     });
 
+    console.log("Browser opened")
+
     const page = await browser.newPage();
     await page.goto(URL);
 
 	const liveURL = await page.locator('#videoPlayer_html5_api').getAttribute('src')
-	
+	console.log("Found URL in HTML")
+
 	await browser.close();
+    console.log("Browser closed")
 	
 	const HDLiveURL = liveURL.replace(SEARCH_STRING, NEW_STRING)
 	
@@ -34,6 +38,7 @@ async function buildPlaylist() {
 
     m3u.channels.find(x => x.name == 'Keshet 12').url = decodeURIComponent(keshetURL)
     
+    console.log("Writing playlist file")
     const newm3u = writeM3U(m3u)
     fs.writeFileSync(PLAYLIST_FILE, newm3u)
     
