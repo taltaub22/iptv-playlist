@@ -39,9 +39,6 @@ jobs:
       - name: Run Node.js script
         run: node index.js
 
-      - name: Disconnect VPN
-        run: sudo pgrep openvpn | xargs -I {} kill -9 {}
-
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
