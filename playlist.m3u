@@ -2,7 +2,7 @@
 #EXTINF:-1 type="stream" group="All" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Kan11Logo.svg/640px-Kan11Logo.svg.png" aspect-ratio="16:9" tvg-country="il",KAN 11 Israel
 https://kan11w.media.kan.org.il/hls/live/2105694/2105694/master.m3u8
 #EXTINF:-1 type="stream" group="All",Keshet 12
-https://mako-streaming.akamaized.net/stream/hls/live/2033791/k12dvr/index.m3u8?b-in-range=0-5000&hdnea=st%3D1726328745%7Eexp%3D1726329645%7Eacl%3D%2F*%7Ehmac%3Db195305761e9d838659874547b09ce8227a5dee6177e636b17c9aabc10320764&_uid=888aac3b-5d7b-4d57-b592-985ae6e60d2a
+https://mako-streaming.akamaized.net/stream/hls/live/2033791/k12dvr/index.m3u8?b-in-range=0-5000&hdnea=st%3D1726415141%7Eexp%3D1726416041%7Eacl%3D%2F*%7Ehmac%3De9a903dc4dfb11f345fc91531903ac62dd63b00599d47cad8323cb2a5e602dd9&_uid=02ebac48-3c94-4201-a2fa-6826a2dc3d13&dxu=83256f65-96fa-4edb-bc56-da16ce087421
 #EXTINF:-1 type="stream" group="All" aspect-ratio="16:9" tvg-country="il",Reshet 13
 https://d18b0e6mopany4.cloudfront.net/out/v1/08bc71cf0a0f4712b6b03c732b0e6d25/index.m3u8
 #EXTINF:-1 type="stream" group="All" logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/LOGO_i24NEWS.png/1920px-LOGO_i24NEWS.png",I24 News Hebrew
